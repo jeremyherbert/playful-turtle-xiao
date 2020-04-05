@@ -61,6 +61,14 @@ It is safe to continue to perform SPI transactions whether or not the device has
 
 In the table above, the `GPO` register allows you to control 5 general purpose outputs. Simply write a bit to 1 drive the corresponding pin high, or 0 to turn it off. Updates to the output pins are as soon as possible; you do not need to send the SEND_REPORT command to have them update.
 
+## LEDs
+
+There are four LEDs next to the USB connector. 
+
+- The green LED indicates that the board is powered on. 
+- The yellow LED blinks when SPI data has been received. 
+- The two blue LEDs correspond to UART TX and RX activity.
+
 ## Connection information
 
 WARNING: Do not use the pinout information provided by seeedstudio. 
