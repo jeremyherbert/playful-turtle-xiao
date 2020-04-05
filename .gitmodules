@@ -1,0 +1,6 @@
+[submodule "libs/tinyusb"]
+	path = libs/tinyusb
+	url = https://github.com/hathach/tinyusb
+[submodule "libs/ringbuf"]
+	path = libs/ringbuf
+	url = https://github.com/jeremyherbert/ringbuf
