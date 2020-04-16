@@ -53,7 +53,7 @@ All SPI transactions are two bytes long. The first byte is a register address, a
 
 X = don't care
 
-SEND_REPORT is a special register which, when written to, indicates to the device that it should send new the updated data to the PC as soon as possible. Due to the way that USB works, this update does not happen immediately. The device is configured to send updates every 2ms (500Hz), but this may be much longer depending on the USB host controller and operating system that the device is connected to. 
+SEND_REPORT is a special register which, when written to, indicates to the device that it should send new the updated data to the PC as soon as possible. Due to the way that USB works, this update does not happen immediately. The device is configured to send updates every 2ms (500Hz), but this may be much longer depending on the USB host controller and operating system that the device is connected to. Note that the device will **not** report the gamepad data over USB automatically, you need to write to the SEND_REPORT register every time you wish it to send updated data to the PC. 
 
 It is safe to continue to perform SPI transactions whether or not the device has sent the updated data to the PC; if transactions occur on the SPI interface while an update is pending, they will either be ignored or merged with the pending data (depending on the exact timing).
 
