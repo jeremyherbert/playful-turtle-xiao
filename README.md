@@ -23,7 +23,7 @@ It is designed to be used with the [seeeduino xiao](http://wiki.seeedstudio.com/
 6. The device will reflash its own firmware and then disconnect the storage device. You're now ready to go! 
 7. (Your device may need a power cycle to start correctly the first time; just unplug and replug the USB cable.)
 
-![bootloader-animation](https://github.com/SeeedDocument/Seeeduino-XIAO/raw/master/img/XIAO-reset.gif)
+![bootloader-animation](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif)
 
 ## Usage
 
