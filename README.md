@@ -55,7 +55,7 @@ X = don't care
 
 SEND_REPORT is a special register which, when written to, indicates to the device that it should send new the updated data to the PC as soon as possible. Due to the way that USB works, this update does not happen immediately. The device is configured to send updates every 2ms (500Hz), but this may be much longer depending on the USB host controller and operating system that the device is connected to. Note that the device will **not** report the gamepad data over USB automatically, you need to write to the SEND_REPORT register every time you wish it to send updated data to the PC. 
 
-It is safe to continue to perform SPI transactions whether or not the device has sent the updated data to the PC; if transactions occur on the SPI interface while an update is pending, they will either be ignored or merged with the pending data (depending on the exact timing). However, you should wait at least 1ms after driving CS high before driving it low again to send new data.
+It is safe to continue to perform SPI transactions whether or not the device has sent the updated data to the PC; if transactions occur on the SPI interface while an update is pending, they will either be ignored or merged with the pending data (depending on the exact timing). However, you should wait at least 1ms after driving CS high before driving it low again to send new data. This delay may need to be longer depending on how many USB devices are communicating with the PC at once. Typical symptoms of this being too low are repeated pulsing or glitching of input messages on the PC.
 
 ### General purpose outputs (GPO)
 
