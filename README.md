@@ -73,4 +73,4 @@ There are four LEDs next to the USB connector.
 
 WARNING: Do not use the pinout information provided by seeedstudio. 
 
-![playful-turtle-xiao pinout](https://i.imgur.com/ZCGnLm2.png)
+![playful-turtle-xiao pinout](https://files.jeremyherbert.net/playful-turtle-xiao.png)
